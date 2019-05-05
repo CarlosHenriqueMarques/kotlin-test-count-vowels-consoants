@@ -1,12 +1,11 @@
 package tests;
 
-
+var CONSONANTS = "qwrtypsdfghjklçzxcvbnm"
+var VOWELS = "aeiou"
     fun countVowels(str : String): Int{
         var count = 0
-        var VOWELS = "aeiou"
-        var stringFormatat = str.toLowerCase()
 
-        for(letter in stringFormatat){
+        for(letter in str.toLowerCase()){
             if(letter in VOWELS){
                 count++
             }
@@ -16,14 +15,24 @@ package tests;
 
     fun countConsonantes(str : String): Int{
         var count = 0
-        var CONSONANTS = "qwrtypsdfghjklçzxcvbnm"
-        var stringFormatat = str.toLowerCase()
 
-        for (letter in stringFormatat){
+        for (letter in str.toLowerCase()){
             if (letter in CONSONANTS) {
                 count++
             }
         }
         return count
     }
+
+    fun isNotVowelsAndConsonantes(str: String): String{
+        var retorno = "Sucess"
+        for(letter in str.toLowerCase()){
+            if ((letter !in  CONSONANTS) && (letter !in VOWELS)) {
+                retorno = "Error"
+            }
+        }
+        return retorno
+    }
+
+
 

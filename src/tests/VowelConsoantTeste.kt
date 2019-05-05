@@ -21,5 +21,9 @@ class VowelConsoantTeste{
             Assert.assertEquals(19,countConsonantes(phrase))
         }
 
+        @Test fun notVowelsAndConsonants(){
+            Assert.assertEquals("Error", isNotVowelsAndConsonantes("^^!"))
+        }
+
 
 }
